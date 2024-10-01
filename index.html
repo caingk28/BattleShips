@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title animate__animated animate__bounce">Battleship</h1>
+        <div class="boards-container">
+            <div class="board-wrapper">
+                <h2>Your Fleet</h2>
+                <div id="player-board" class="board"></div>
+            </div>
+            <div class="board-wrapper">
+                <h2>Enemy Waters</h2>
+                <div id="computer-board" class="board"></div>
+            </div>
+        </div>
+        <div id="message-display" class="message"></div>
+        <div class="controls">
+            <button id="start-button" class="btn btn-primary animate__animated animate__pulse">Start Game</button>
+            <button id="reset-button" class="btn btn-secondary" disabled>Reset Ships</button>
+        </div>
+        <div id="stats-display" class="stats">
+          <h3>Game Statistics</h3>
+          <p>Games Played: <span id="games-played">0</span></p>
+          <p>Wins: <span id="wins">0</span></p>
+          <p>Losses: <span id="losses">0</span></p>
+          <p>Hit Accuracy: <span id="hit-accuracy">0.00</span>%</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
